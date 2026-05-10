@@ -1,68 +1,152 @@
-# 🛒 Amazon Brazil SQL Analysis
+# Amazon Brazil SQL Analysis
 
 ## 📌 Project Overview
-This project focuses on analyzing the Amazon Brazil e-commerce dataset using PostgreSQL to uncover insights related to customer behavior, payment methods, product performance, customer segmentation, and revenue trends.
 
-The analysis was performed using advanced SQL concepts such as joins, CTEs, subqueries, aggregate functions, and window functions to solve real-world business problems and generate actionable insights.
+This project focuses on performing end-to-end SQL analysis on the Amazon Brazil E-commerce dataset using PostgreSQL and pgAdmin.
+
+The objective of this project is to analyze customer behavior, payment patterns, sales trends, product performance, and customer segmentation using advanced SQL concepts such as:
+
+* JOINS
+* CTEs
+* Window Functions
+* Aggregate Functions
+* CASE Statements
+* Subqueries
+* Data Cleaning Techniques
 
 ---
 
-## 🛠 Tools & Technologies
-- PostgreSQL
-- SQL
-- Excel
-- Data Analysis
+## 🛠️ Tools & Technologies Used
+
+* PostgreSQL
+* pgAdmin 4
+* SQL
+* Google Sheets (for visualization)
+* GitHub
 
 ---
 
 ## 📂 Dataset Information
-Dataset Used:
-- customers.csv
-- orders.csv
-- order_items.csv
-- payments.csv
-- products.csv
-- sellers.csv
 
-Dataset Source:
-Olist Brazilian E-Commerce Public Dataset
+The dataset contains Amazon Brazil e-commerce transactional data.
 
-Kaggle Link:
-https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+### Tables Used:
+
+* customers
+* orders
+* order_items
+* payments
+* products
+* sellers
+
+Dataset Source: Olist Brazilian E-commerce Dataset
 
 ---
 
-## 📊 Key Business Questions Solved
-- Which payment methods are most preferred by customers?
-- Which product categories generate the highest revenue?
-- What are the monthly and seasonal sales trends?
-- Which customers are high-value customers?
-- How can customers be segmented based on purchase behavior?
-- How does monthly sales growth vary across payment methods?
+## 📊 Key Business Analysis Performed
+
+### Payment Analysis
+
+* Average payment value by payment type
+* Payment type percentage distribution
+* Payment value standard deviation
+
+### Sales Analysis
+
+* Monthly revenue analysis
+* Seasonal sales trends
+* Top revenue generating product categories
+
+### Customer Analysis
+
+* Customer segmentation
+* Returning customers identification
+* Customer ranking based on average order value
+
+### Product Analysis
+
+* Product category price comparison
+* High selling products
+* Missing product category identification
+
+---
+
+## 📷 Project Screenshots
+
+### Revenue Trend Analysis
+
+Shows monthly revenue trends and peak sales months.
+
+![Revenue Trend](screenshots/revenue_trend.jpg)
+
+---
+
+### Payment Type Distribution
+
+Analysis of most preferred payment methods by customers.
+
+![Payment Percentage](screenshots/payment_percentage.jpg)
+
+---
+
+### Seasonal Sales Analysis
+
+Comparison of sales performance across seasons.
+
+![Seasonal Sales](screenshots/seasonal_sales.jpg)
+
+---
+
+### Top Product Categories by Revenue
+
+Highest revenue generating product categories.
+
+![Top Categories](screenshots/top_category_revenue.jpg)
+
+---
+
+### Customer Segmentation
+
+Customers categorized as Occasional, Regular, and Loyal buyers.
+
+![Customer Segmentation](screenshots/customer_segmentation.jpg)
+
+---
+
+### Average Payment Analysis
+
+Average payment value across different payment types.
+
+![Average Payment](screenshots/avg_payment_analysis.jpg)
 
 ---
 
 ## 📈 Key Insights
-- Credit cards dominate customer transactions across the platform.
-- Spring season generated the highest sales revenue.
-- A large percentage of customers are one-time buyers.
-- High-value product categories contribute significantly to overall revenue.
-- Customer segmentation helps identify loyal and returning customers for targeted marketing strategies.
+
+* Credit Card is the most preferred payment method among customers.
+* Spring season generated the highest overall sales.
+* Beauty & Health category generated the maximum revenue.
+* Most customers fall under the Occasional buyer segment.
+* Certain product categories have very high pricing variations.
 
 ---
 
 ## 🚀 SQL Concepts Used
-- Joins
-- Common Table Expressions (CTEs)
-- Subqueries
-- Window Functions
-- Aggregate Functions
-- CASE Statements
-- Ranking Functions
+
+* INNER JOIN
+* GROUP BY
+* ORDER BY
+* HAVING
+* CASE WHEN
+* Common Table Expressions (CTEs)
+* Window Functions
+* Aggregate Functions
+* Subqueries
+* Data Cleaning
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```bash
 amazon-brazil-sql-analysis/
@@ -76,14 +160,9 @@ amazon-brazil-sql-analysis/
 
 ---
 
-## 📄 Project Files
-- `queries/Amazon_brazil.sql` → Complete SQL analysis queries
-- `Amazon_Brazil_analysis.pdf` → Detailed business analysis and recommendations
-- `datasets/` → Source datasets used in analysis
-
----
-
 ## 👩‍💻 Author
-Harshita Sharma
 
-Data Analyst | SQL | Power BI | Tableau | Python
+Harshita Sharma
+Aspiring Data Analyst | SQL | PostgreSQL | Python | Tableau
+
+LinkedIn: https://www.linkedin.com/in/harshitasharma14/
