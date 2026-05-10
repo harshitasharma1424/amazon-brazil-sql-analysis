@@ -1,59 +1,40 @@
 # Amazon Brazil SQL Analysis
 
 ## Project Overview
-This project analyzes the Amazon Brazil e-commerce dataset using PostgreSQL to derive business insights related to customers, orders, payments, and sales trends.
-
----
+This project analyzes Amazon Brazil e-commerce data using PostgreSQL to understand customer behavior, payment preferences, product performance, revenue trends, and sales growth patterns.
 
 ## Tools Used
 - PostgreSQL
 - SQL
 - Excel
-- Data Analysis
-
----
-
-## Key Analysis Performed
-- Top selling products
-- Customer order trends
-- Revenue analysis
-- Payment type analysis
-- Monthly sales trends
-- Customer segmentation
-
----
 
 ## SQL Concepts Used
 - Joins
 - CTEs
 - Subqueries
-- Aggregate Functions
 - Window Functions
+- Aggregate Functions
 - CASE Statements
 
----
+## Key Business Questions Answered
+- Which payment methods are most used by customers?
+- Which product categories generate the highest revenue?
+- What are the monthly and seasonal sales trends?
+- Which customers are high-value customers?
+- How can customers be segmented based on purchase frequency?
+- How does monthly sales growth vary by payment type?
 
-## Dataset
-Amazon Brazil E-commerce Public Dataset
+## Key Insights
+- Credit card payments dominate customer transactions.
+- Certain product categories contribute significantly to total revenue.
+- Seasonal and monthly revenue trends help identify peak sales periods.
+- Customer segmentation helps identify New, Returning, Loyal, Occasional, and Regular customers.
+- High-value customers can be targeted for exclusive rewards programs.
 
----
-
-## Project Structure
-
-```text
-datasets/      -> Raw dataset files
-queries/       -> SQL queries
-screenshots/   -> Query outputs & dashboards
-```
-
----
-
-## Sample Insights
-- Identified peak order months
-- Analyzed most preferred payment methods
-- Found top revenue generating categories
-
----
+## Project Files
+- `queries/Amazon_brazil.sql` — Complete SQL analysis queries
+- `datasets/` — Dataset files
+- `screenshots/` — Query outputs and analysis screenshots
 
 ## Author
 Harshita Sharma  
