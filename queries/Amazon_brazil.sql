@@ -160,15 +160,42 @@ FROM monthly_sales
 ORDER BY product_id, sale_month;
 
 
---Q7--payment_type,sales_month,month
+-- Q7 payment_type, sale_month, monthly_total, monthly_change
 WITH monthly_sales AS (
-SELECT p.payment_type,
-EXTRACT(MONTH from  o.order_purchase_timestamp) AS sale_month,
-SUM(oi.price) AS monthly_total FROM orders o
-JOIN order_items oi ON o.order_id = oi.order_id
-WHERE EXTRACT(YEAR FROM o.order_purchase_timestamp) = 2018
-AND o.order_status = 'delivered'
-GROUP BY p.payment_type,EXTRACT(MONTH from o.order_purchase_timestamp);
+    SELECT 
+        p.payment_type,
+        EXTRACT(MONTH FROM o.order_purchase_timestamp) AS sale_month,
+        SUM(oi.price) AS monthly_total
+    FROM amazon_brazil.orders o
+    JOIN amazon_brazil.order_items oi 
+        ON o.order_id = oi.order_id
+    JOIN amazon_brazil.payments p
+        ON o.order_id = p.order_id
+    WHERE EXTRACT(YEAR FROM o.order_purchase_timestamp) = 2018
+      AND o.order_status = 'delivered'
+    GROUP BY p.payment_type, EXTRACT(MONTH FROM o.order_purchase_timestamp)
+),
+monthly_growth AS (
+    SELECT 
+        payment_type,
+        sale_month,
+        monthly_total,
+        LAG(monthly_total) OVER (
+            PARTITION BY payment_type 
+            ORDER BY sale_month
+        ) AS previous_month_total
+    FROM monthly_sales
+)
+SELECT 
+    payment_type,
+    sale_month,
+    ROUND(monthly_total, 2) AS monthly_total,
+    ROUND(
+        ((monthly_total - previous_month_total) / previous_month_total) * 100, 
+        2
+    ) AS monthly_change_percentage
+FROM monthly_growth
+ORDER BY payment_type, sale_month;
 
  
 
