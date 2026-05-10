@@ -1,41 +1,89 @@
-# Amazon Brazil SQL Analysis
+# 🛒 Amazon Brazil SQL Analysis
 
-## Project Overview
-This project analyzes Amazon Brazil e-commerce data using PostgreSQL to understand customer behavior, payment preferences, product performance, revenue trends, and sales growth patterns.
+## 📌 Project Overview
+This project focuses on analyzing the Amazon Brazil e-commerce dataset using PostgreSQL to uncover insights related to customer behavior, payment methods, product performance, customer segmentation, and revenue trends.
 
-## Tools Used
+The analysis was performed using advanced SQL concepts such as joins, CTEs, subqueries, aggregate functions, and window functions to solve real-world business problems and generate actionable insights.
+
+---
+
+## 🛠 Tools & Technologies
 - PostgreSQL
 - SQL
 - Excel
+- Data Analysis
 
-## SQL Concepts Used
+---
+
+## 📂 Dataset Information
+Dataset Used:
+- customers.csv
+- orders.csv
+- order_items.csv
+- payments.csv
+- products.csv
+- sellers.csv
+
+Dataset Source:
+Olist Brazilian E-Commerce Public Dataset
+
+Kaggle Link:
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+---
+
+## 📊 Key Business Questions Solved
+- Which payment methods are most preferred by customers?
+- Which product categories generate the highest revenue?
+- What are the monthly and seasonal sales trends?
+- Which customers are high-value customers?
+- How can customers be segmented based on purchase behavior?
+- How does monthly sales growth vary across payment methods?
+
+---
+
+## 📈 Key Insights
+- Credit cards dominate customer transactions across the platform.
+- Spring season generated the highest sales revenue.
+- A large percentage of customers are one-time buyers.
+- High-value product categories contribute significantly to overall revenue.
+- Customer segmentation helps identify loyal and returning customers for targeted marketing strategies.
+
+---
+
+## 🚀 SQL Concepts Used
 - Joins
-- CTEs
+- Common Table Expressions (CTEs)
 - Subqueries
 - Window Functions
 - Aggregate Functions
 - CASE Statements
+- Ranking Functions
 
-## Key Business Questions Answered
-- Which payment methods are most used by customers?
-- Which product categories generate the highest revenue?
-- What are the monthly and seasonal sales trends?
-- Which customers are high-value customers?
-- How can customers be segmented based on purchase frequency?
-- How does monthly sales growth vary by payment type?
+---
 
-## Key Insights
-- Credit card payments dominate customer transactions.
-- Certain product categories contribute significantly to total revenue.
-- Seasonal and monthly revenue trends help identify peak sales periods.
-- Customer segmentation helps identify New, Returning, Loyal, Occasional, and Regular customers.
-- High-value customers can be targeted for exclusive rewards programs.
+## 📂 Project Structure
 
-## Project Files
-- `queries/Amazon_brazil.sql` — Complete SQL analysis queries
-- `datasets/` — Dataset files
-- `screenshots/` — Query outputs and analysis screenshots
+```bash
+amazon-brazil-sql-analysis/
+│
+├── datasets/
+├── queries/
+├── screenshots/
+├── Amazon_Brazil_analysis.pdf
+└── README.md
+```
 
-## Author
-Harshita Sharma  
+---
+
+## 📄 Project Files
+- `queries/Amazon_brazil.sql` → Complete SQL analysis queries
+- `Amazon_Brazil_analysis.pdf` → Detailed business analysis and recommendations
+- `datasets/` → Source datasets used in analysis
+
+---
+
+## 👩‍💻 Author
+Harshita Sharma
+
 Data Analyst | SQL | Power BI | Tableau | Python
